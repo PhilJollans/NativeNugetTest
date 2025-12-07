@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net8.0;net48</TargetFrameworks>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>WrapperDll</PackageId>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="../NativeDll/Win32/Debug/bin/NativeDll.dll"
+              Pack="true"
+              PackagePath="runtimes/win-x86/native/NativeDll.dll"
+              PackageCopyToOutput="true"/>
+        <None Include="../NativeDll/x64/Debug/bin/NativeDll.dll"
+              Pack="true"
+              PackagePath="runtimes/win-x64/native/NativeDll.dll"
+              PackageCopyToOutput="true"/>
+    </ItemGroup>
+</Project>
